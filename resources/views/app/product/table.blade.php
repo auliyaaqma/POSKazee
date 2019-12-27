@@ -16,7 +16,7 @@
                 <td>{{$key+1}}</td>
                 <td>{{$product->name}}</td>
                 <td align="right">Rp. {{number_format($product->price,0,',','.')}}</td>
-                <td>{{$product->photo}}</td>
+                <td><img style="width: 50px;" src="{{asset('storage/product_img/'. $product->photo)}}"></td>
                 <td>
                     <a href="#" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> Edit</a>
                     <a href="javascript:void(0)" class="btn btn-danger btn-sm delete" style="color: white" data-url="{{url($url.'/delete', $product->id)}}"><i class="fa fa-trash"></i> Delete
